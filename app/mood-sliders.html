@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" ng-app="moodSlidersApp">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Phone Gallery</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/ng-slider/dist/css/ng-slider.min.css">
+  <link rel="stylesheet" href="css/app.css">
+
+  <script src="bower_components/jquery/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="bower_components/ng-slider/dist/ng-slider.min.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="MoodSliderCtrl">
+  <div class="container-fluid">
+
+      <div class="header">
+        <h3 class="text-muted">Chocobobo</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Colonel Baby's Mood Sliders</h1>
+
+      </div>
+
+    <div class="row">
+      <div class="col-md-7">
+
+        <ul class="list-group">
+          <li class="list-group-item">
+            <p><span class="label label-success">Hug Slider</span></p>
+            <input ng-model="hugSlider" type="text" id="mySlider1" slider options="hugOptions" ng-change="hugChange()" />
+          </li>
+          <li class="list-group-item">
+            <p><span class="label label-success">Hunger Slider</span></p>
+            <input ng-model="hungerSlider" type="text" id="mySlider2" slider options="hungerOptions" ng-change="hungerChange()" />
+          </li>
+          <li class="list-group-item">
+            <p><span class="label label-success">Fun Slider</span></p>
+            <input ng-model="funSlider" type="text" id="mySlider3" slider options="funOptions" ng-change="funChange()" />
+          </li>
+          <li class="list-group-item">
+            <p><span class="label label-success">Social Slider</span></p>
+            <input ng-model="socialSlider" type="text" id="mySlider4" slider options="socialOptions" ng-change="socialChange()" />
+          </li><li class="list-group-item">
+            <p><span class="label label-success">Energy Slider</span></p>
+            <input ng-model="energySlider" type="text" id="mySlider5" slider options="energyOptions" ng-change="energyChange()" />
+          </li>
+          <li class="list-group-item">
+            <p><span class="label label-success">Comfort Slider</span></p>
+            <input ng-model="comfortSlider" type="text" id="mySlider6" slider options="comfortOptions" ng-change="comfortChange()" />
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

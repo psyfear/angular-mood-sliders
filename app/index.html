@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" ng-app="moodSlidersApp">
+<head>
+  <meta charset="utf-8">
+  <title>Google Phone Gallery</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/ng-slider/dist/css/ng-slider.min.css">
+  <script src="bower_components/jquery/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="bower_components/ng-slider/dist/ng-slider.min.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="MoodSliderCtrl">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div>
+        <input ng-model="value"  type="text" id="mySlider1" slider options="options" />
+      </div>
+      <div class="col-md-2">
+        <!--Sidebar content-->
+
+        Search: <input ng-model="query">
+        Sort by:
+        <select ng-model="orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+
+      </div>
+      <div class="col-md-10">
+        <!--Body content-->
+
+        <ul class="phones">
+          <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
+            <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+            <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+            <p>{{phone.snippet}}</p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function ctrl($scope) {
+      $scope.value = "50";
+      $scope.options = {
+        from: 1,
+        to: 100,
+        step: 1,
+        dimension: " km"
+      };
+    }
+  </script>
+</body>
+</html>
