@@ -2,22 +2,9 @@
 
 /* Controllers */
 
-// var phonecatApp = angular.module('phonecatApp', []);
-
-// phonecatApp.controller('PhoneListCtrl', function($scope, $http) {
-//   $http.get('phones/phones.json').success(function(data) {
-//     $scope.phones = data;
-//   });
-
-//   $scope.orderProp = 'age';
-// });
-
 var moodSlidersApp = angular.module('moodSlidersApp', ['ngCookies', 'ngSlider']);
 
 moodSlidersApp.controller('MoodSliderCtrl', ['$scope','$cookies','$http', '$log', function($scope, $cookies, $http, $log) {
-  // $http.get('phones/phones.json').success(function(data) {
-  //   $scope.phones = data;
-  // });
 
   if($cookies.hugSlider) {
     $scope.hugSlider = $cookies.hugSlider;
