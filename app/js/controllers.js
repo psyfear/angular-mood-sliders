@@ -8,21 +8,39 @@ moodSlidersApp.controller('MoodSliderCtrl', ['$scope','$cookies','$http', '$log'
 
   if($cookies.hugSlider) {
     $scope.hugSlider = $cookies.hugSlider;
+  } else {
+    $cookies.hugSlider = 0
+    $scope.hugSlider = $cookies.hugSlider
   }
-  if($cookies.hugSlider) {
+  if($cookies.hungerSlider) {
     $scope.hungerSlider = $cookies.hungerSlider;
+  } else {
+    $cookies.hungerSlider = 0
+    $scope.hungerSlider = $cookies.hungerSlider
   }
-  if($cookies.hugSlider) {
+  if($cookies.funSlider) {
     $scope.funSlider = $cookies.funSlider;
+  } else {
+    $cookies.funSlider = 0
+    $scope.funSlider = $cookies.funSlider
   }
-  if($cookies.hugSlider) {
+  if($cookies.socialSlider) {
     $scope.socialSlider = $cookies.socialSlider;
+  } else {
+    $cookies.socialSlider = 0
+    $scope.socialSlider = $cookies.socialSlider
   }
-  if($cookies.hugSlider) {
+  if($cookies.energySlider) {
     $scope.energySlider = $cookies.energySlider;
+  } else {
+    $cookies.energySlider = 0
+    $scope.energySlider = $cookies.energySlider
   }
-  if($cookies.hugSlider) {
+  if($cookies.comfortSlider) {
     $scope.comfortSlider = $cookies.comfortSlider;
+  } else {
+    $cookies.comfortSlider = 0
+    $scope.comfortSlider = $cookies.comfortSlider
   }
 
   $scope.hugOptions = {
